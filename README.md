@@ -1,13 +1,13 @@
-# RubyDig
+# RubyDig2
 
-This gem adds Hash#dig and Array#dig from Ruby 2.3+ to earlier versions of Ruby.  It is a no-op if you are running Ruby 2.3 or greater.
+`Hash#dig2` and `Array#dig2` enhances Rubys `Hash#dig` and `Array#dig` methods functionality.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'ruby_dig'
+gem 'ruby_dig2'
 ```
 
 And then execute:
@@ -16,12 +16,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ruby_dig
+    $ gem install ruby_dig2
 
 ## Usage
 
 ```
-require 'ruby_dig'
+require 'ruby_dig2'
 
 response = {mom: {first: "Marge", last: "Bouvier"},
             dad: {first: "Homer", last: "Simpson"},
@@ -30,13 +30,13 @@ response = {mom: {first: "Marge", last: "Bouvier"},
                 {first: "Lisa", last: "Simpson"}
             ]}
 
-response.dig(:kids, 1, :first)
+response.dig2(:kids, 1, :first)
 # => "Lisa"
 ```
 
 ## Contributing
 
-1. Fork it ( https://github.com/Invoca/ruby_dig/fork )
+1. Fork it ( https://github.com/leoc/ruby_dig2/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

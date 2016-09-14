@@ -1,8 +1,8 @@
-require "bundler/gem_tasks"
+require 'bundler/gem_tasks'
 
-task :default => :test
+task default: :test
 
-desc "Run unit tests."
+desc 'Run unit tests.'
 task :test do
-  ruby "./test/ruby_dig_test.rb"
+  ruby './test/ruby_dig2_test.rb'
 end
