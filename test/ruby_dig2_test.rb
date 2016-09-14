@@ -75,6 +75,14 @@ class RubyDig2Test
                               dad: {first: "Homer", last: "Simpson"},
                               kids: [{first: "Bart"}, {first: "Lisa"}]}.dig2(:kids, 1, :first)
       end
+
+      it "detects key-value path element" do
+        assert_equal 'Bouvier', { people: [
+                                    {first: "Marge", last: "Bouvier"},
+                                    {first: "Homer", last: "Simpson"},
+                                  ]
+                                }.dig2(:people, {first: "Marge"}, :last)
+      end
     end
   end
 end

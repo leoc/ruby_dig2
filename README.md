@@ -34,6 +34,22 @@ response.dig2(:kids, 1, :first)
 # => "Lisa"
 ```
 
+Or finding the first detected element in array of hashes.
+
+```
+require 'ruby_dig2'
+
+response = {mom: {first: "Marge", last: "Bouvier"},
+            dad: {first: "Homer", last: "Simpson"},
+            kids: [
+                {first: "Bart", last: "Simpson"},
+                {first: "Lisa", last: "Simpson"}
+            ]}
+
+response.dig2(:kids, {first: 'Lisa'}, :last)
+# => "Simpson"
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/leoc/ruby_dig2/fork )

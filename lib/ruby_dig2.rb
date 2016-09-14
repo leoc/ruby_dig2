@@ -1,6 +1,13 @@
 module RubyDig2
   def dig2(key, *rest)
-    value = self[key]
+    value =
+      if key.is_a?(Hash)
+        detect do |e| 
+          key.all? { |k, v| e[k] == v }
+        end
+      else
+        self[key]
+      end
     if value.nil? || rest.empty?
       value
     elsif value.respond_to?(:dig2)
